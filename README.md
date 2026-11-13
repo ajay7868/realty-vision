@@ -32,7 +32,7 @@ Email delivery is intentionally disabled for the current rollout. When ready, ve
 
 ### Asset readiness
 
-The immersive page can preview a 360° panorama image and a GLB model selected from the user's device. These files stay local to that browser session and are not uploaded or made available to invited guests. Actual VKS project tours require approved 360° captures, optimized GLB models, scene manifests and hotspot coordinates. See `assets/README.md`.
+The immersive page now includes a CC0 sample 360° environment from Poly Haven, a browser-generated sample apartment GLB, local file upload for your own panorama/GLB files, and six additional representative interior/exterior gallery images. The sample environment and model are illustrative only and are not VKS property scans or approved project models. User-selected files stay local to that browser session and are not uploaded or made available to invited guests. Actual VKS project tours require approved 360° captures, optimized GLB models, scene manifests and hotspot coordinates. See `assets/README.md`.
 
 ### Current rollout status
 
@@ -44,3 +44,10 @@ The immersive page can preview a 360° panorama image and a GLB model selected f
 | VR | WebXR immersive-VR entry implemented; compatible headset/browser and secure context required |
 
 The sample listing images and illustrative project details are not verified project media or specifications. Do not present them as actual VKS site imagery.
+
+
+### Sample media sources
+
+- Sample 360° environment: [Poly Haven Studio](https://polyhaven.com/a/poly_haven_studio), CC0. The viewer loads the 4K tonemapped JPG from Poly Haven's download CDN.
+- Sample apartment GLB: generated procedurally in the browser with Three.js geometry and exported to GLB for viewer testing. It is not a surveyed floor plan or a real VKS unit.
+- Additional gallery photographs: Unsplash image CDN; used as illustrative design references, not project-specific marketing photography.

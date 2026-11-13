@@ -15,7 +15,7 @@
 <main class="wrap">
 <div class="crumb"><a href="/">Home</a> / <a href="/#properties">Projects</a> / <span id="crumbName">Project</span></div>
 <section class="hero">
-<div><div class="eyebrow">VKS Realty collection</div><h1 id="name">Explore your next address.</h1><p id="summary">Discover the project, explore the available information and speak with the VKS Realty team.</p><div class="chips"><span class="chip" id="configuration"></span><span class="chip" id="location"></span></div><div class="price" id="price"></div><p class="disclaimer">Indicative reference only. Price, configuration, inventory, possession timeline and legal/RERA details are not independently verified. Confirm all details with VKS Realty before making a decision.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px"><a class="btn" href="#enquire">Request a callback</a><button class="btn ghost" id="share" type="button">Share project ↗</button></div></div>
+<div><div class="eyebrow">VKS Realty collection</div><h1 id="name">Explore your next address.</h1><p id="summary">Discover the project, explore the available information and speak with the VKS Realty team.</p><div class="chips"><span class="chip" id="configuration"></span><span class="chip" id="location"></span></div><div class="price" id="price"></div><p class="disclaimer">Indicative reference only. Price, configuration, inventory, possession timeline and legal/RERA details are not independently verified. Confirm all details with VKS Realty before making a decision.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px"><a class="btn" href="#enquire">Request a callback</a><a class="btn ghost" id="exploreLink" href="/explore.html">Explore spaces</a><button class="btn ghost" id="share" type="button">Share project ↗</button></div></div>
 <img class="hero-img" id="heroImage" alt="Representative property image">
 </section>
 <section class="section"><div class="eyebrow">At a glance</div><h2>Project overview</h2><div class="facts"><div class="fact"><small>Project</small><strong id="factName"></strong></div><div class="fact"><small>Configuration</small><strong id="factConfig"></strong></div><div class="fact"><small>Location reference</small><strong id="factLocation"></strong></div><div class="fact"><small>Price reference</small><strong id="factPrice"></strong></div></div><p class="disclaimer" style="margin-top:16px">The information on this demonstration page is a catalogue starting point, not a sales offer or verified project specification.</p></section>
@@ -46,6 +46,7 @@ document.querySelector("#factConfig").textContent=p.config;
 document.querySelector("#factLocation").textContent=p.location;
 document.querySelector("#factPrice").textContent=p.price;
 document.querySelector("#leadProject").value=p.name;
+document.querySelector("#exploreLink").href="/explore.html?project="+key;
 const imageUrl=id=>"https://images.unsplash.com/"+id+"?auto=format&fit=crop&w=1200&q=85";
 document.querySelector("#heroImage").src=imageUrl(p.images[0]);
 document.querySelector("#gallery").innerHTML=p.images.map((id,i)=>'<img src="'+imageUrl(id)+'" alt="Representative property inspiration '+(i+1)+'">').join("");

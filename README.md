@@ -22,3 +22,25 @@ Create a HubSpot private app and grant CRM contacts and notes read/write scopes.
 ### Optional email notifications (later)
 
 Email delivery is intentionally disabled for the current rollout. When ready, verify a sending domain in Resend, create an API key, and set `RESEND_API_KEY` and `RESEND_FROM_EMAIL`. Notifications will go to `sales@vksrealtygroup.com`.
+
+
+## Immersive property experience
+
+- `/explore.html` — six-project room navigation, sample hotspot overlays and the co-browsing invitation panel.
+- `/immersive.html` — Three.js 360° equirectangular panorama viewer, GLB model viewer and WebXR immersive-VR entry on supported devices.
+- `/realtime` — standalone Node.js + SSE session service for private collaboration. Deploy separately on a persistent Node host; it is not hosted by the Vercel static deployment.
+
+### Asset readiness
+
+The immersive page can preview a 360° panorama image and a GLB model selected from the user's device. These files stay local to that browser session and are not uploaded or made available to invited guests. Actual VKS project tours require approved 360° captures, optimized GLB models, scene manifests and hotspot coordinates. See `assets/README.md`.
+
+### Current rollout status
+
+| Capability | Implementation status |
+|---|---|
+| 360° navigation | Viewer implemented; approved panorama assets pending |
+| Navigable 3D / GLB | Viewer implemented; approved VKS GLB models pending |
+| Co-browsing | Session API and explorer UI foundation committed; deploy realtime service and configure its HTTPS origin before live use |
+| VR | WebXR immersive-VR entry implemented; compatible headset/browser and secure context required |
+
+The sample listing images and illustrative project details are not verified project media or specifications. Do not present them as actual VKS site imagery.

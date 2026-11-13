@@ -130,7 +130,7 @@ window.VKS_REALTIME_URL = window.VKS_REALTIME_URL || "";
   document.querySelector("#next").addEventListener("click", () => setTimeout(() => broadcast(null), 0));
   document.querySelector("#hotspotButtons").addEventListener("click", (event) => {
     const marker = event.target.closest("[data-hotspot]");
-    if (marker) setTimeout(() => broadcast(marker.dataset.hotspot), 0);
+    if (marker && !applyingRemote) setTimeout(() => broadcast(marker.dataset.hotspot), 0);
   });
 
   const sessionId = params.get("session");
